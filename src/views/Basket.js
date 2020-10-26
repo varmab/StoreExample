@@ -12,17 +12,15 @@ class Basket extends Component {
   constructor(props){
     super(props);
 
+    console.log(props)
+
     this.state={
-      cartItems:[]
+      cartItems:props.cartItems
     }
   }
 
-  UNSAFE_componentWillReceiveProps(newProps){
-    console.log(newProps)
-  }
-
   render() {
-    console.log(this.state.cartItems)
+  
     return (
       <View
         style={{
